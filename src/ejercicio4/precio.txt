@@ -1,0 +1,20 @@
+Item: Zapatilla		 Precio: 189.05
+	Item: Polo		 Precio: 59.42
+	Item: Gorra		 Precio: 103.17
+	Item: Casaca		 Precio: 40.86
+	Item: Medias		 Precio: 56.95
+	Item: Blusa		 Precio: 154.02
+	Item: Corbata		 Precio: 15.57
+	Item: Sombrero		 Precio: 83.02
+	Item: Lazo		 Precio: 190.91
+	Item: Zapatos		 Precio: 105.11
+	Item: Bibiri		 Precio: 162.54
+	Item: Cartera		 Precio: 77.24
+	Item: Sandalias		 Precio: 14.09
+	Item: Chompa		 Precio: 105.65
+	Item: Tacos		 Precio: 144.69
+	Item: Mochila		 Precio: 190.04
+	Item: Panties		 Precio: 185.03
+	Item: Lentes		 Precio: 56.49
+	Item: Short		 Precio: 87.23
+	

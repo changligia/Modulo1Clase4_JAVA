@@ -1,0 +1,4 @@
+Hola, como estas?
+Ok, te diré la hora
+Es hora de comer!
+Adios
