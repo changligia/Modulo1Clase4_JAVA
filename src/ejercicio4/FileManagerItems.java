@@ -21,16 +21,13 @@ public class FileManagerItems {
 
                 final var lineaItems = scanner.nextLine();
                 listaItems.add(lineaItems); //meto los items a la lista
-
             }
             scanner.close();
         } catch (FileNotFoundException fileNotFoundException) {
             System.out.println("File No encontrado");
             System.out.println(fileNotFoundException.getLocalizedMessage());
-
         }
         return listaItems;
-
     }
 
     public static void escribirResultadoStock(String path, HashMap<String, Integer> mapStock) {
@@ -53,7 +50,7 @@ public class FileManagerItems {
             var fileWriter = new FileWriter(path);
 
             for (var set : mapPrecio.entrySet()) {
-                var mensaje = String.format("Item: %s\t\t Precio: %.2f\n\t", set.getKey(), set.getValue());
+                var mensaje = String.format("Item: %s\t Precio: %.2f\n", set.getKey(), set.getValue());
                 fileWriter.write(mensaje);
             }
 
@@ -70,15 +67,13 @@ public class FileManagerItems {
 
             for (var set : mapPrecio.entrySet()) {
                 var stock = mapStock.get(set.getKey());
-                var mensaje = String.format("Item: %s\t\t Precio: %.2f\t\t  Stock: %d\n", set.getKey(), set.getValue(), stock);
+                var mensaje = String.format("Item: %s\t Precio: %.2f\t Stock: %d\n", set.getKey(),
+                        set.getValue(), stock);
                 fileWriter.write(mensaje);
             }
-
             fileWriter.close();
         } catch (IOException ioException) {
             System.out.println(ioException.getLocalizedMessage());
         }
     }
-
-
 }

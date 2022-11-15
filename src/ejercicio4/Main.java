@@ -18,22 +18,24 @@ public class Main {
         FileManagerItems.escribirResultadoPrecio("src/ejercicio4/precio.txt", mapPrecio);
 
         FileManagerItems.escribirResultadoTienda("src/ejercicio4/tienda.txt", mapPrecio, mapStock);
-
     }
-
 
     static void organizarData(List<String> listaTexto, HashMap<String, Double> mapPrecio,
                               HashMap<String, Integer> mapStock) {
         for (var linea : listaTexto) {
             var listaItems = Arrays.asList(linea.split(","));
-            //var precioConDolar = listaItems.get(0);
-            var index = listaItems.get(0).indexOf("USD"); //posición
-            var precioSinDolar = Double.parseDouble(listaItems.get(0).substring(0, index)); // "XX.XX"
-            var stock = Integer.parseInt(listaItems.get(1));
-            var nombre = listaItems.get(2);
-            mapPrecio.put(nombre, precioSinDolar);
-            mapStock.put(nombre, stock);
 
+            var index = listaItems.get(0).indexOf("USD"); //posición
+
+            var precioSinDolar = Double.parseDouble(listaItems.get(0).substring(0, index)); // "XX.XX"
+
+            var stock = Integer.parseInt(listaItems.get(1));
+
+            var nombre = listaItems.get(2);
+
+            mapPrecio.put(nombre, precioSinDolar);
+
+            mapStock.put(nombre, stock);
         }
     }
 }

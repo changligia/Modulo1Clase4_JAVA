@@ -28,15 +28,11 @@ public class Main {
     static void imprimirKeys(HashMap<Integer, String> map) {
         System.out.println();
         for (var set : map.entrySet()) {
-            System.out.printf("Palabra: %s%n", set);
+            System.out.printf("Palabra: %s%n", set.getKey());
         }
     }
 
-    static String buscarNumero(Integer n, HashMap<Integer, String> map) {
-        if (map.containsKey(n)) {
-            System.out.printf("El Key que usted seleccionó es: %s%n", map.get(n));
-        } else
-            System.out.println("El String no existe: ");
-        return null;
+    static String buscarNumero(int n, HashMap<Integer, String> map) {
+        return map.getOrDefault(n, "No existe");
     }
 }
