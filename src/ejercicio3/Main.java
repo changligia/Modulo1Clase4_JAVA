@@ -14,8 +14,8 @@ public class Main {
     static List<String> manipularPeliculas(List<String> lista) {
         final var listaActualizada = new ArrayList<String>(); //Creo la lista vacía
         for (var i = 1; i < lista.size(); i++) {
-            var pelicula = lista.get(i);
-            var convertirMayuscula = String.format("%d. %s%n", i, pelicula.toUpperCase());
+            final var pelicula = lista.get(i);
+            final var convertirMayuscula = String.format("%d. %s%n", i, pelicula.toUpperCase());
             listaActualizada.add(convertirMayuscula);
         }
         return listaActualizada;
