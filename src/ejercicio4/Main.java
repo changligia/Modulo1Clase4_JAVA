@@ -24,17 +24,13 @@ public class Main {
                               HashMap<String, Integer> mapStock) {
         for (var linea : listaTexto) {
             var listaItems = Arrays.asList(linea.split(","));
-
             var index = listaItems.get(0).indexOf("USD"); //posición
 
             var precioSinDolar = Double.parseDouble(listaItems.get(0).substring(0, index)); // "XX.XX"
-
             var stock = Integer.parseInt(listaItems.get(1));
-
             var nombre = listaItems.get(2);
 
             mapPrecio.put(nombre, precioSinDolar);
-
             mapStock.put(nombre, stock);
         }
     }

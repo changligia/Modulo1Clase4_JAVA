@@ -35,7 +35,7 @@ public class FileManagerItems {
             var fileWriter = new FileWriter(path);
 
             for (var set : mapStock.entrySet()) {
-                var mensaje = String.format("Nombre: %s\t Stock: %d\n", set.getKey(), set.getValue());
+                final var mensaje = String.format("Nombre: %s\t Stock: %d\n", set.getKey(), set.getValue());
                 fileWriter.write(mensaje);
             }
 
@@ -66,8 +66,8 @@ public class FileManagerItems {
             var fileWriter = new FileWriter(path);
 
             for (var set : mapPrecio.entrySet()) {
-                var stock = mapStock.get(set.getKey());
-                var mensaje = String.format("Item: %s\t Precio: %.2f\t Stock: %d\n", set.getKey(),
+                final var stock = mapStock.get(set.getKey());
+                final var mensaje = String.format("Item: %s\t Precio: %.2f\t Stock: %d\n", set.getKey(),
                         set.getValue(), stock);
                 fileWriter.write(mensaje);
             }
